@@ -1,10 +1,10 @@
-import OrderStatus from "./Pages/Status"
+import Status from "./Pages/Status"
 
 function App() {
 
   return (
     <>
-    <OrderStatus/>
+    <Status/>
     </>
   )
 }

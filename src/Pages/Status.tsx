@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import '../Styles/Pages/status.scss'
 
 
-const OrderStatus: React.FC = () => {
+const Status: React.FC = () => {
     const [orderId, setOrderId] = useState<string | null>(null)
     const [eta, setEta] = useState<number | null>(null)
 
@@ -19,4 +19,4 @@ const OrderStatus: React.FC = () => {
     )
 }
 
-export default OrderStatus
+export default Status
