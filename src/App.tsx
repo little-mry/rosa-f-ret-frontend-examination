@@ -1,11 +1,10 @@
-
+import OrderStatus from "./Pages/Status"
 
 function App() {
-  
 
   return (
     <>
-     <p>Hello world</p>
+    <OrderStatus/>
     </>
   )
 }
