@@ -1,11 +1,10 @@
-import Status from "./Pages/Status"
+import { Outlet } from "react-router-dom"
 
 function App() {
+  
 
   return (
-    <>
-    <Status/>
-    </>
+    <Outlet />
   )
 }
 
