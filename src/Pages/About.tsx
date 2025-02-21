@@ -2,6 +2,7 @@ import headerImage from "../assets/header (2).png"
 import headerButton from "../assets/navicon (2).png"
 import aboutProfile from "../assets/image 1.jpg"
 import aboutFooter from "../assets/header.png"
+import "../Styles/Pages/about.scss"
 
 const About = () => {
   return (

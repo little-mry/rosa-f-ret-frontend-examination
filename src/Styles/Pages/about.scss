@@ -1,0 +1,103 @@
+@use "../Partials/Variables" as *;
+
+.about-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: $bg-color-pink;
+  font-family: $font-primary;
+  color: $font-color-black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-header {
+  position: relative;
+  width: 100%;
+}
+
+.about-header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-header-button {
+  position: absolute;
+  top: $spacing-md;
+  left: $spacing-md;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: $font-size-xxl;
+    height: auto;
+  }
+}
+
+.about-content {
+  padding: $spacing-lg;
+  text-align: left;
+  max-width: 85%;
+
+  h1 {
+    font-family: $font-primary;
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+  }
+
+  h2 {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+    font-weight: $font-weight-medium-bold;
+    color: $bg-color-brown;
+    margin-bottom: $spacing-md;
+    line-height: $line-height-small;
+  }
+
+  p {
+
+    font-family: $font-secondary;
+    font-size: $font-size-xs;
+    line-height: $line-height-small;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.about-profile {
+  padding: $spacing-lg;
+  text-align: center;
+  font-family: $font-primary;
+
+  .about-profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius-round;
+    object-fit: cover;
+    margin-bottom: $spacing-sm;
+  }
+
+  h3 {
+    margin-top: 0rem;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+  }
+
+  h4 {
+    margin-top: -1rem;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+    color: black;
+  }
+}
+
+.about-footer {
+  width: 100%;
+
+  .about-footer-img {
+    width: 100%;
+    height: auto;
+  }
+}
