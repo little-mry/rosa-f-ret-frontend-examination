@@ -29,17 +29,20 @@ export default function MenuItems() {
 					// 	<p>{item.desc}</p>
 					// 	<p className="Sum">{item.price} kr</p>
 					// </div>
-          <div className="cont">
-          <div className="left"><img
+          <section className="cont">
+          <figure className="img"><img
                 src={AddImg}
                 alt="Add symbol"
                 className="btn-size"
-              /></div>
-          <div className="right">
-            <div className="top">{item.title}..........{item.price}kr</div>
-            <div className="bottom">{item.desc}</div>
-          </div>
-        </div>
+              /></figure>
+          <section className="info">
+            <h3 className="top">{item.title}......</h3>
+            <p className="desc">{item.desc}</p>
+          </section>
+		  <section className="sum">
+			<h4>{item.price}kr</h4>
+			</section>
+        </section>
 				))}
 			</div>
 		

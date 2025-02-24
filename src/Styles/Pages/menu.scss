@@ -27,52 +27,46 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-  /*   justify-content: space-between; */
     flex-wrap: wrap;
 
-    h3{
-        font-family: $font-primary;
+    .cont {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between; // Add this to create space between elements
+        margin-bottom: 1rem;
     }
 
-    .MenuItemsImg {
-        height: 4rem;
-        width: 4rem;
-        }
-        p{
-            font-family: $font-secondary;
-            font-size: $font-size-xs;
-        }
-        .Sum {
-            flex-direction: row;
-            font-family: $font-secondary;
-           /*  align-self: flex-end; */
-            font-size: $font-size-lg;
-            font-weight: $font-weight-medium-bold;
-            
-        }
+    .top {
+        font-family: $font-primary;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .desc {
+        font-family: Work Sans;
+        font-size: $font-size-lg;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    
+    .btn-size {
+        align-self: flex-start;
+    }
 }
 
-/* .CoffeeInfo {
-    display: flex;
-    flex-direction: row;
-
-} */
-
-
-.cont{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.top{
-    font-family: $font-primary;
-    font-size: 23px;
-    font-weight: 700;
+.info {
+    padding: 0.5rem;
+    padding-left: 2rem;
+    flex-grow: 1; 
 }
 
-.bottom{
-    font-family: Work Sans;
-     font-size: $font-size-lg;
-     font-weight: 400;
-     font-size: 12px;
+.sum {
+    margin-left: auto; 
+    padding-right: 1rem;
+    padding-bottom: 0,5rem;
+
+    h4 {
+        font-size: $font-size-xl;
+    }
 }
