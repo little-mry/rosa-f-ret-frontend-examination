@@ -22,8 +22,9 @@ header {
 
 .MenuItems {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  /*   justify-content: space-between; */
     flex-wrap: wrap;
 
     h3{
@@ -40,6 +41,7 @@ header {
         }
         .Sum {
             flex-direction: row;
+            font-family: $font-secondary;
            /*  align-self: flex-end; */
             font-size: $font-size-lg;
             font-weight: $font-weight-medium-bold;
