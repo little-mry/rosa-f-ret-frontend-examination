@@ -1,0 +1,30 @@
+@use '../Partials/Variables';
+
+.cart-popup {
+    width: 90%;
+    height: 88%;
+}
+
+.heading__cart {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-bold;
+    font-family: $font-primary;
+}
+
+
+.cart__item {
+    height: 2.375;
+}
+
+.item__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    font-family: $font-primary;
+}
+
+.item__price {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+    font-family: $font-secondary;
+
+}
