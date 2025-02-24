@@ -23,11 +23,20 @@ header {
 .MenuItems {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h3{
+        font-family: $font-primary;
+    }
 
     .MenuItemsImg {
         height: 4rem;
         width: 4rem;
+        }
+        p{
+            font-family: $font-secondary;
+            font-size: $font-size-xs;
         }
         .Sum {
             flex-direction: row;
@@ -37,3 +46,9 @@ header {
             
         }
 }
+
+/* .CoffeeInfo {
+    display: flex;
+    flex-direction: row;
+
+} */
