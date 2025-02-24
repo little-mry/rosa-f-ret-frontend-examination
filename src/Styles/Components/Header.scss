@@ -1,0 +1,24 @@
+@use '../Partials/Variables' as *;
+
+.header__con {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $spacing-sm;
+}
+
+.cart__amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color-orange;
+    border-radius: $border-radius-round;
+    width: .875rem;
+    height: .875rem;
+    color: $font-color-white;
+    font-size: $font-size-xs;
+}
