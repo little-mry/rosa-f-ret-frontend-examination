@@ -29,12 +29,12 @@ const Status: React.FC = () => {
     }, [])
 
     return (
-        <div>
-            <h3>Ordernummer: {orderNr || 'Laddar nummer...'}</h3>
-            <img src="/src/assets/Group 5.svg" alt="" />
-            <h2>Din beställning är på väg!
-            <p>{eta !== null ? `${eta} minuter` : 'Laddar tid...'}</p></h2>
-            <button>Tillbaka</button>
+        <div className="wrapper-status">
+            <h3 className="status-header">Ordernummer: {orderNr || 'Laddar nummer...'}</h3>
+            <img src="/src/assets/Group 5.svg" alt="" className="status-img" />
+            <h2 className="status-underheader">Din beställning är på väg!
+            <p className="status-text">{eta !== null ? `${eta} minuter` : 'Laddar tid...'}</p></h2>
+            <button className="status-button">Tillbaka</button>
         </div>
     )
 }

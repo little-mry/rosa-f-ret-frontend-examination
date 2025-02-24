@@ -3,45 +3,38 @@
 .wrapper {
     background-color: $bg-color-dark-green;
     width: 100%;
-    min-height: 100;
-    flex-direction: column; 
+    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;  
     align-items: center;    
     justify-content: center; 
-    position: relative;
-     .header {
-            font-size: $font-size-h1;
-            padding: 0;
-            margin-top: 1rem;
-        }
+    position: relative;      
 
-        .text {
-            padding: 0.5rem;
-            font-size: $font-size-xxs;
-            font-weight: $font-weight-normal;
-            letter-spacing: 0.2rem;
-        }
-
-
-        .img-left, .img-right {
-            position: absolute;
-            height: 100vh;  
-            width: auto;     
-            top: 0;         
-        }
-
-        .img-left {
-            left: 0;
-        }
-
-        .img-right {
-            right: 0;
-        }
-
-    .img-center {
-        justify-self: center;
-        align-self: center;
-
-      
-       
+    .header {
+        font-size: $font-size-h1;
+        margin-top: 1rem;
     }
+
+    .text {
+        padding: 0.5rem;
+        font-size: $font-size-xxs;
+        font-weight: $font-weight-normal;
+        letter-spacing: 0.2rem;
+    }
+
+    .img-left, .img-right {
+        position: absolute;
+        height: 100vh;   
+        width: auto;     
+        top: 0;          
+    }
+
+    .img-left {
+        left: 0; 
+    }
+
+    .img-right {
+        right: 0;
+    }
+
 }

@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-div {
+.wrapper-status {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,14 +18,14 @@ div {
     text-align: center;
 
 
-        h3 {
+        .status-header {
             font-family: $font-secondary;
             font-weight: $font-weight-normal;
             font-size: $font-size-xs;
             }
 }
 
-h2 {
+.status-underheader {
     display: flex;
     flex-direction: column;
     font-size: 40px;
@@ -33,7 +33,7 @@ h2 {
     font-family: $font-primary;
     font-weight: $font-weight-bold;
     }
-    p {
+    .status-text {
         font-size: 22px;
         padding-top: 7%;
         font-family: $font-secondary;
@@ -41,7 +41,7 @@ h2 {
 }
 
 
-button {
+.status-button {
     width: 184px;
     height: 55px;
     border-radius: 50px;
