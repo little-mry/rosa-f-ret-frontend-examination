@@ -67,11 +67,12 @@
 }
 
 .about-profile {
-  padding: $spacing-lg;
+  margin: $spacing-lg;
   text-align: center;
   font-family: $font-primary;
 
   .about-profile-img {
+    margin-left: 1rem;
     width: 5rem;
     height: 5rem;
     border-radius: $border-radius-round;
@@ -79,6 +80,7 @@
   }
 
   h3 {
+
     font-size: $font-size-lg;
     font-weight: $font-weight-bold;
   }
