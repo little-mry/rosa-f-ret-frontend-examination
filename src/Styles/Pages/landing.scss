@@ -1,0 +1,43 @@
+@use '../Partials/Variables' as *;
+
+.wrapper {
+    background-color: $bg-color-dark-green;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  
+     .header {
+            font-size: $font-size-h1;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .text {
+            padding: 0.5rem;
+            font-size: $font-size-xxs;
+            font-weight: $font-weight-normal;
+            letter-spacing: 0.2rem;
+        }
+
+
+    .img-left {
+        height: 120%;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .img-right {
+        height: 120%;
+        position: absolute;
+        right: -1rem;
+    }
+
+    .img-center {
+        justify-self: center;
+        align-self: center;
+
+      
+       
+    }
+}
