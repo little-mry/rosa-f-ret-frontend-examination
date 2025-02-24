@@ -8,7 +8,7 @@ const Menu: React.FC = () => {
   return (
     <div className="menu">
         <header>
-            <img src={HeaderImg}/>
+            <img src={HeaderImg} alt="Floral header/footer" className="HeaderImg"/>
             <h1>Meny</h1>
         </header>
         <MenuItem/>

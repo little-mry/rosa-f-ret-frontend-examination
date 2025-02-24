@@ -4,13 +4,31 @@
     width: 100%;
     height: 100%;
     background-color: $bg-color-pink;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        font-family: $font-primary;
+        justify-self: center;
+    }
 }
 
-img {
-    width: 100%;
-}
 
-h1 {
-    font-family: $font-primary;
-    justify-self: center;
+.MenuItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .MenuItemsImg {
+        height: 4rem;
+        width: 4rem;
+        }
+        .Sum {
+            flex-direction: row;
+            align-self: flex-end;
+            font-size: $font-size-md;
+            
+        }
 }
