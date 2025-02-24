@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AddImg from "../assets/add.png";
-import { getMenu, MenuResponse, MenuItem } from "../Services/api";
+import { getMenu, MenuItem } from "../Services/api";
 
 export default function MenuItems() {
 	const [menuItems, setMenuItems] = useState<MenuItem[]>([]);

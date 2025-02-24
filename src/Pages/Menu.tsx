@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Styles/Pages/menu.module.scss';
-import HeaderImg from '../assets/header (2).png';
+import '../Styles/Pages/menu.scss';
+import HeaderImg from '../assets/header-up.png';
 import FooterImg from '../assets/header.png';
 import MenuItem from '../Components/MenuItem'
 
