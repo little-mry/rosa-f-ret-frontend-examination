@@ -1,0 +1,47 @@
+//COLORS
+$bg-color-pink: rgb(201, 190, 188);
+$bg-color-brown: rgba(47, 41, 38, 1);
+$bg-color-orange: rgba(229, 103, 78, 1);
+$bg-color-dark-green: rgba(56, 132, 109, 1);
+
+//FONTS
+$font-primary: 'PT Serif', serif;
+$font-secondary: 'Work Sans', serif;
+
+$font-color-black: $bg-color-brown;
+$font-color-white: rgba(255, 255, 255, 1);
+
+$font-weight-normal: 400;
+$font-weight-medium-bold: 600;
+$font-weight-bold: 700;
+
+$font-size-h1: 2.625rem; // 42px
+$font-size-h2: 2.25rem; // 36px
+$font-size-h3: 2rem; // 32px
+
+$font-size-xxs: .55rem; // 9px
+$font-size-xs: .75rem; // 12px
+$font-size-sm: .8125rem; // 13-14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.375rem; // 20px
+$font-size-xxl: 1.45rem; // 23-24px
+
+//LINE HEIGHT
+$line-height-small: 1.4rem;
+$line-height-md: 1.875rem;
+$line-height-lg: 2.625rem;
+$line-height-xl: 3.25rem;
+
+//BORDER RADIUS
+$border-radius-sm: 3px;
+$border-radius-round: 50% ;
+
+// Spacing(margin och paddings)
+$spacing-xxs: .25rem;
+$spacing-sm: .5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
