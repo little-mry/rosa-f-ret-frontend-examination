@@ -11,8 +11,12 @@
 
     h1 {
         font-family: $font-primary;
-        justify-self: center;
+        justify-self: center;   
     }
+}
+
+header {
+    padding-bottom: $spacing-xl;
 }
 
 
@@ -27,8 +31,9 @@
         }
         .Sum {
             flex-direction: row;
-            align-self: flex-end;
-            font-size: $font-size-md;
+           /*  align-self: flex-end; */
+            font-size: $font-size-lg;
+            font-weight: $font-weight-medium-bold;
             
         }
 }
