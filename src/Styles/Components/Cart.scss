@@ -3,9 +3,13 @@
 .cart-popup {
     width: 90%;
     height: 88%;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading__cart {
+    align-self: flex-start;
+    text-align: center;
     font-size: $font-size-h3;
     font-weight: $font-weight-bold;
     font-family: $font-primary;
@@ -22,9 +26,39 @@
     font-family: $font-primary;
 }
 
+.cart__dotted-line {
+    border-bottom: dotted 1px black;
+}
+
 .item__price {
     font-size: $font-size-xs;
     font-weight: $font-weight-normal;
     font-family: $font-secondary;
+}
 
+.change-cart__icon {
+    max-width: 1.375rem;
+    max-height: 1.375rem;
+}
+
+.item__amount {
+    font-size: $font-size-xs;
+}
+
+.sum {
+    font-size: $font-size-xl;
+    font-weight:  $font-weight-bold;
+}
+
+.sum-condition {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+}
+
+.cart__btn {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    background-color: $bg-color-brown;
+    color: $font-color-white;
+    padding: $spacing-xxs $spacing-md;
 }

@@ -1,5 +1,5 @@
 import CartItem from "./CartItem";
-import '../Styles/Components/Cart.scss'
+import "../Styles/Components/Cart.scss";
 
 const Cart = () => {
   return (
@@ -8,6 +8,13 @@ const Cart = () => {
       <section className="cart__list">
         <CartItem />
       </section>
+      <article className="sum__con">
+        <p className="sum sum__title">Total</p>
+        <div className="cart__dotted-line"></div>
+        <p className="sum sum_amount">88 kr</p>
+        <p className="sum-condition">inkl. moms + drönarleverans</p>
+      </article>
+      <button className="cart__btn">Skicka min order!</button>
     </section>
   );
 };
