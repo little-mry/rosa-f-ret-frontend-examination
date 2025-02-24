@@ -120,3 +120,29 @@ export async function createOrder(orderItems: OrderItem[]): Promise<OrderRespons
  *     }
  *   };
  **/
+
+export async function getOrderStatus(orderId: string): Promise<OrderResponse> {
+	try {
+		const response = await fetch(`${BASE_URL}/beans/order/status/${orderId}`);
+
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+
+		const data: OrderResponse = await response.json();
+		return data;
+	} catch (error) {
+		console.error("Error fetching order status:", error);
+		throw error;
+	}
+}
+
+/**
+ * Example usage:
+ * try {
+ *   const status = await getOrderStatus("abc123");
+ *   console.log(`Order ${status.orderNr} will arrive in ${status.eta} minutes`);
+ * } catch (error) {
+ *   console.error("Failed to get order status");
+ * }
+ */
