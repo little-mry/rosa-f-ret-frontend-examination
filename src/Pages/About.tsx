@@ -5,6 +5,7 @@ import aboutFooter from "../assets/header.png"
 import "../Styles/Pages/about.scss"
 import AboutText from "../Components/AboutText"
 import Header from "../Components/Header"
+import Cart from "../Components/Cart"
 
 const About = () => {
   return (
@@ -15,7 +16,7 @@ const About = () => {
       </header> */}
 
       <Header />
-
+      <Cart />
       <AboutText />
 
       <div className="about-profile">
