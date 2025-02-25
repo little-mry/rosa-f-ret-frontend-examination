@@ -1,10 +1,29 @@
 @use '../Partials/Variables' as *;
 
+.cart__icon__con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: black;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 99%;
+}
+
+.cart__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    cursor: pointer;
+  }
+
 .cart__popup {
     min-width: 90%;
-    
     position: absolute;
-    top: 4rem;
+    top: 2rem;
+    right: 1rem;
     display: flex;
     gap: $spacing-md;
     flex-direction: column;
