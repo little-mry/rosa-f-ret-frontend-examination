@@ -1,22 +1,14 @@
-/* import headerImage from "../assets/header (2).png"
-import headerButton from "../assets/navicon (2).png" */
-import aboutProfile from "../assets/image 1.jpg"
-import aboutFooter from "../assets/header.png"
-import "../Styles/Pages/about.scss"
-import AboutText from "../Components/AboutText"
-import Header from "../Components/Header"
-/* import Cart from "../Components/Cart" */
+import aboutProfile from "../assets/image 1.jpg";
+import aboutFooter from "../assets/header.png";
+import "../Styles/Pages/about.scss";
+import AboutText from "../Components/AboutText";
+import Header from "../Components/Header";
 
 const About = () => {
   return (
     <div className="about-container">
-     {/*  <header className="header">
-        <img src={headerImage} alt="header med blad" className="about-header-img" />
-        <img src={headerButton} alt="Hamburgarmeny header" className="about-header-button" />
-      </header> */}
-
       <Header />
-  
+
       <AboutText />
 
       <div className="about-profile">
@@ -29,7 +21,7 @@ const About = () => {
         <img src={aboutFooter} alt="Footer med blad" className="about-footer-img" />
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
