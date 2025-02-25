@@ -5,26 +5,10 @@ import "../Styles/Components/nav.scss";
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
     const navigate = useNavigate();
 
     const toggleMenu = () => {
-        if (isMenuOpen) {
-            setIsClosing(true);
-            setTimeout(() => {
-                setIsMenuOpen(false);
-                setIsClosing(false);
-            }, 500); // Match animation duration
-        } else {
-            setIsMenuOpen(true);
-        }
-    };
-
-    const handleNavigation = (path: string) => {
-        toggleMenu();
-        setTimeout(() => {
-            navigate(path);
-        }, 500);
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -32,18 +16,18 @@ const Nav = () => {
             <img
                 src={NavIcon}
                 alt="Navigation icon"
-                className="nav__icon"
+                className={`nav__icon ${isMenuOpen ? 'nav__icon--open' : ''}`}
                 onClick={toggleMenu}
             />
 
             {isMenuOpen && (
-                <div className={`nav__menu ${isClosing ? 'closing' : ''}`}>
+                <div className="nav__menu">
                     <div className="nav__menu-content">
                         <nav>
                             <ul>
-                                <li onClick={() => handleNavigation('/menu')}>Meny</li>
-                                <li onClick={() => handleNavigation('/about')}>Vårt kaffe</li>
-                                <li onClick={() => handleNavigation('/status')}>Order Status</li>
+                                <li onClick={() => { navigate('/menu'); toggleMenu(); }}>Meny</li>
+                                <li onClick={() => { navigate('/about'); toggleMenu(); }}>Vårt kaffe</li>
+                                <li onClick={() => { navigate('/status'); toggleMenu(); }}>Order Status</li>
                             </ul>
                         </nav>
                     </div>
