@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createOrder, OrderItem, OrderResponse } from "../Services/api";
-import { useNavigate } from "react-router-dom"; // Add this import
+import { useNavigate } from "react-router-dom";
 
 import "../Styles/Pages/status.scss";
 
