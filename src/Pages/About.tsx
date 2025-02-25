@@ -1,18 +1,14 @@
-/* import headerImage from "../assets/header (2).png"
-import headerButton from "../assets/navicon (2).png" */
 import aboutProfile from "../assets/image 1.jpg";
 import aboutFooter from "../assets/header.png";
 import "../Styles/Pages/about.scss";
 import AboutText from "../Components/AboutText";
 import Header from "../Components/Header";
-import Cart from "../Components/Cart";
-/* import Cart from "../Components/Cart" */
 
 const About = () => {
   return (
     <div className="about-container">
       <Header />
-      <Cart />
+
       <AboutText />
 
       <div className="about-profile">
