@@ -25,14 +25,16 @@ export default function MenuItems() {
   return (
     <>
       <div className="MenuItems">
+
         <section className="cont" key={campaignOffer.id}>
           <figure className="img">
             <img src={AddImg} alt="Add symbol" className="btn-size" />
           </figure>
-          <section className="info">
-            <h3 className="top">{campaignOffer.title}....</h3>
+         
+            <h3 className="top">{campaignOffer.title}</h3>
+			<div className="menu_dotted_line"></div>
             <p className="desc">{campaignOffer.desc}</p>
-          </section>
+          
           <section className="sum">
             <h4>{campaignOffer.price}kr</h4>
           </section>
@@ -43,10 +45,11 @@ export default function MenuItems() {
             <figure className="img">
               <img src={AddImg} alt="Add symbol" className="btn-size" />
             </figure>
-            <section className="info">
-              <h3 className="top">{item.title}....</h3>
+           
+              <h3 className="top">{item.title}</h3>
+			  <div className="menu_dotted_line"></div>
               <p className="desc">{item.desc}</p>
-            </section>
+            
             <section className="sum">
               <h4>{item.price}kr</h4>
             </section>
