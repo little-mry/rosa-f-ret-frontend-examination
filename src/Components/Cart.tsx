@@ -7,6 +7,8 @@ const Cart = () => {
       <h3 className="heading__cart">Din beställing</h3>
       <section className="cart__list">
         <CartItem />
+        <CartItem />
+        <CartItem />
       </section>
       <article className="sum__con">
         <p className="sum sum__title">Total</p>

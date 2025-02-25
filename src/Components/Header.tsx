@@ -8,7 +8,7 @@ const Header = () => {
     <header className="header__con" style={{ backgroundImage: `url("${headerImg}")`}}>
       <img src={NavIcon} alt="Navigation icon" className="nav__icon" />
       <div className="cart__con">
-        <img src={CartIcon} alt="Navigation icon" className="cart__icon" />
+        <img src={CartIcon} alt="Cart icon" className="cart__icon" />
         <p className="cart__amount">{}</p>
       </div>
     </header>
