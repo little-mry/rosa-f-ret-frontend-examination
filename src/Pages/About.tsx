@@ -12,13 +12,21 @@ const About = () => {
       <AboutText />
 
       <div className="about-profile">
-        <img src={aboutProfile} alt="Eva Cortado" className="about-profile-img" />
+        <img
+          src={aboutProfile}
+          alt="Eva Cortado"
+          className="about-profile-img"
+        />
         <h3>Eva Cortado</h3>
         <h4>VD & Grundare</h4>
       </div>
 
       <footer className="about-footer">
-        <img src={aboutFooter} alt="Footer med blad" className="about-footer-img" />
+        <img
+          src={aboutFooter}
+          alt="Footer med blad"
+          className="about-footer-img"
+        />
       </footer>
     </div>
   );
