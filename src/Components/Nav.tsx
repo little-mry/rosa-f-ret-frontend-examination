@@ -27,7 +27,7 @@ const Nav = () => {
                             <ul>
                                 <li onClick={() => { navigate('/menu'); toggleMenu(); }}>Meny</li>
                                 <li onClick={() => { navigate('/about'); toggleMenu(); }}>Vårt kaffe</li>
-                                <li onClick={() => { navigate('/status'); toggleMenu(); }}>Order Status</li>
+                                <li onClick={() => { navigate('/status'); toggleMenu(); }}>Orderstatus</li>
                             </ul>
                         </nav>
                     </div>
