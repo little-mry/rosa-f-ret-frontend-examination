@@ -4,6 +4,7 @@ import '../Styles/Pages/landing.scss'
 
 
 const Landing: React.FC = () => {
+    
     return (
         <div className="wrapper">
             <img src="/src/assets/header (2).svg" alt=""  className="img-left"/>
