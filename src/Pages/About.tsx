@@ -6,21 +6,22 @@ import Header from "../Components/Header";
 
 const About = () => {
   return (
-    <div className="about-container">
-      <Header />
+    
+      <div className="about-container">
+        <Header />
+        <AboutText />
 
-      <AboutText />
+        <div className="about-profile">
+          <img src={aboutProfile} alt="Eva Cortado" className="about-profile-img" />
+          <h3>Eva Cortado</h3>
+          <h4>VD & Grundare</h4>
+        </div>
 
-      <div className="about-profile">
-        <img src={aboutProfile} alt="Eva Cortado" className="about-profile-img" />
-        <h3>Eva Cortado</h3>
-        <h4>VD & Grundare</h4>
+        <footer className="about-footer">
+          <img src={aboutFooter} alt="Footer med blad" className="about-footer-img" />
+        </footer>
       </div>
-
-      <footer className="about-footer">
-        <img src={aboutFooter} alt="Footer med blad" className="about-footer-img" />
-      </footer>
-    </div>
+  
   );
 };
 
