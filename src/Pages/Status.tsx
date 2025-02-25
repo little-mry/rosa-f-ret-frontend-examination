@@ -1,37 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { createOrder, OrderItem, OrderResponse } from "../Services/api";
+import { getOrderStatus} from "../Services/api";
 import { useNavigate } from "react-router-dom";
+import "../Styles/Pages/status.scss";
 
 import "../Styles/Pages/status.scss";
 
 const Status: React.FC = () => {
     const navigate = useNavigate();
-	const [orderNr, setOrderNr] = useState<string | null>(null);
-	const [eta, setEta] = useState<number | null>(null);
+    const [eta, setEta] = useState<number | null>(null);
+    
+    // Example order number
+    const orderNr = "AB1740482423819Z";
 
-	const handleOrder = async () => {
-		try {
-			const orderItems: OrderItem[] = [
-				{ name: "Bryggkaffe", price: 39 },
-				{ name: "Caffè Doppio", price: 49 },
-			];
+    useEffect(() => {
+        const fetchOrderStatus = async () => {
+            try {
+                const status = await getOrderStatus(orderNr);
+                setEta(status.eta);
+            } catch (error) {
+                console.log("error fetching status:", error);
+            }
+        };
 
-			const orderResponse: OrderResponse = await createOrder(orderItems);
-
-			setOrderNr(orderResponse.orderNr);
-			setEta(orderResponse.eta);
-		} catch (error) {
-			console.log("error", error);
-		}
-	};
-
-	useEffect(() => {
-		handleOrder();
-	}, []);
+        fetchOrderStatus();
+    }, []);
 
 	return (
 		<div className="wrapper-status">
-			<h3 className="status-header">Ordernummer: {orderNr || "Laddar nummer..."}</h3>
+			<h3 className="status-header">Ordernummer: {orderNr}</h3>
 			<img
 				src="/src/assets/Group 5.svg"
 				alt=""
