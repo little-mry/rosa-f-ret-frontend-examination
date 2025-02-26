@@ -6,19 +6,13 @@
         position: absolute;
         top: 20px;
         left: 20px;
-        /* margin-bottom: 2rem; */
-
         z-index: 1001;
-        
-        /* &--close {
-        } */
     }
 
     &__menu {
         position: fixed;
         top: 0;
         left: 0;
-        /* transform: translate(-50%, -50%); */
         width: 100%;
         height: 100%;
         background: $bg-color-brown;
@@ -27,7 +21,6 @@
         justify-content: center;
         align-items: center;
         max-width: 100%; 
-        overflow-y: hidden;
 
         &-content {
             text-align: center;
@@ -36,14 +29,12 @@
         }
     }
 }
+
 nav {
     ul {
         display: flex;
         flex-direction: column;
         gap: $spacing-md;
-        list-style: none;
-        padding: 0;
-        margin: 0;
 
         li {
             display: flex;
@@ -53,7 +44,6 @@ nav {
             color: $font-color-white;
             font-size: $font-size-h3;
             font-weight: $font-weight-bold;
-            /* margin: 40px 0; */
             cursor: pointer;
 
             &:hover {
