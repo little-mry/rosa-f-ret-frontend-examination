@@ -19,8 +19,13 @@
     display: flex;
     gap: $font-size-md;
     flex-direction: column;
- 
-    .cont {
+    padding-bottom: $spacing-xl;
+
+    .cont_camp {
+        color: rgb(211, 33, 20);
+    }
+    
+    .cont, .cont_camp {
         display: grid;
         justify-items: start;
         align-items: end;
@@ -38,11 +43,15 @@
         font-weight: $font-weight-bold;
     }
 
-    .menu_dotted_line {
+    .menu_dotted_line, .menu_dotted_line_camp {
         grid-column: 3/4;
         grid-row: 1/2;
         width: 100%;
         border-bottom: dotted 1.5px black;
+    }
+
+    .menu_dotted_line_camp {
+        border-bottom: dotted 1.5px rgb(211, 33, 20);
     }
 
     .desc {
