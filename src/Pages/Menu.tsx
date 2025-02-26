@@ -3,14 +3,11 @@ import '../Styles/Pages/menu.scss';
 import FooterImg from '../assets/header.png';
 import MenuItem from '../Components/MenuItem'
 import Header from "../Components/Header";
-
 const Menu: React.FC = () => {
   return (
     <div className="menu">
-        <header>
-            <Header />
-            <h1>Meny</h1>
-        </header>
+        <Header />
+        <h1>Meny</h1>
         <MenuItem/>
         <footer>
         <img src={FooterImg}/>
@@ -18,5 +15,4 @@ const Menu: React.FC = () => {
     </div>
   );
 };
-
 export default Menu;

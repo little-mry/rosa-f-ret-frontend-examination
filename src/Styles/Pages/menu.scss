@@ -1,28 +1,26 @@
 @use '../Partials/Variables' as *;
-
 .menu {
     width: 100%;
     height: 100%;
     background-color: $bg-color-pink;
-
     h1 {
         font-family: $font-primary;
         justify-self: center;   
         text-align: center;
-        font-size: 2.625rem; 
+        font-size: $font-size-h1; 
+        padding-bottom: $spacing-xl;
     }
 }
-
-header {
-    padding-bottom: $spacing-xl;
-}
-
 .MenuItems {
     display: flex;
-    gap: 1rem;
+    gap: $font-size-md;
     flex-direction: column;
- 
-    .cont {
+    padding-bottom: $spacing-xl;
+    .cont_camp {
+        color: rgb(211, 33, 20);
+    }
+    
+    .cont, .cont_camp {
         display: grid;
         justify-items: start;
         align-items: end;
@@ -30,34 +28,32 @@ header {
         grid-template-columns: auto auto 1fr auto;
         width: 100%;
         height: auto;
-
     }
-
     .top {
         grid-column: 2/3;
         grid-row: 1/2;
         font-family: $font-primary;
-        font-size: 1.25rem; 
-        font-weight: 700;
+        font-size: $font-size-lg; 
+        font-weight: $font-weight-bold;
     }
-
-    .menu_dotted_line {
+    .menu_dotted_line, .menu_dotted_line_camp {
         grid-column: 3/4;
         grid-row: 1/2;
         width: 100%;
         border-bottom: dotted 1.5px black;
     }
-
+    .menu_dotted_line_camp {
+        border-bottom: dotted 1.5px rgb(211, 33, 20);
+    }
     .desc {
         grid-column: 2/4;
         grid-row: 2/3;
         font-family: Work Sans;
         font-size: $font-size-lg;
-        font-weight: 400;
-        font-size: 0.75rem; 
+        font-weight: $font-weight-normal;
+        font-size: $font-size-xs; 
     }
     
-  
     .img {
         grid-column: 1/2;
         grid-row: 1/3;
@@ -72,14 +68,12 @@ header {
     .btn-size {
         object-fit: contain; 
     }
-
     .sum {
         grid-column: 4/5;
         grid-row: 1/2;
+        padding-right: $font-size-md;
         h4 {
             font-size: $font-size-xl;
         }
     }
 }
-
-
