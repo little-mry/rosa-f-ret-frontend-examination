@@ -18,7 +18,7 @@ const Cart = () => {
 
   const handleSubmitOrder = async () => {
     if (cartItems.length === 0) return;
-
+  
     try {
       setIsSubmitting(true);
       const expandedOrderItems: OrderItem[] = [];
@@ -30,22 +30,18 @@ const Cart = () => {
           });
         }
       }
-
       
       const response = await createOrder(expandedOrderItems);
   
+      
+      localStorage.setItem('airbean_last_order', response.orderNr);
+  
       clearCart();
-      
-     
       setIsCartOpen(false);
-      
-      
       navigate("/status", { state: { orderNr: response.orderNr } });
       
     } catch (error) {
       console.error("Failed to place order:", error);
-    
-      alert("Det gick inte att skicka din order. Försök igen senare.");
     } finally {
       setIsSubmitting(false);
     }
