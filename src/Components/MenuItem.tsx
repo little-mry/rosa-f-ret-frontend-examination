@@ -4,8 +4,8 @@ import { getMenu, MenuItem } from "../Services/api";
 import { useCart } from "./CartContext";
 
 export default function MenuItems() {
-	const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
-	const [campaign, setCampaign] = useState(false);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  const [campaign, setCampaign] = useState(false);
 	const { addToCart } = useCart();
 
 	useEffect(() => {

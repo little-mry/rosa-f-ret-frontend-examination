@@ -110,6 +110,13 @@
     font-size: $font-size-xs;
 }
 
+.cart-sum__discount {
+    color: #E5674E;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+  }
+
 .cart-sum {
     justify-self: end;
     display: grid;
