@@ -10,15 +10,19 @@
         font-size: $font-size-h1; 
         padding-bottom: $spacing-xl;
     }
+
 }
+
 .MenuItems {
     display: flex;
     gap: $font-size-md;
     flex-direction: column;
     padding-bottom: $spacing-xl;
-    .cont_camp {
-        color: rgb(211, 33, 20);
-    }
+
+    .cont_camp { 
+        color: rgb(185, 28, 23); 
+        background: linear-gradient(45deg,  #2F8C91, #BAE3DD,#E5674E,); 
+        padding: $spacing-sm 0; } 
     
     .cont, .cont_camp {
         display: grid;
@@ -36,15 +40,18 @@
         font-size: $font-size-lg; 
         font-weight: $font-weight-bold;
     }
+
     .menu_dotted_line, .menu_dotted_line_camp {
         grid-column: 3/4;
         grid-row: 1/2;
         width: 100%;
         border-bottom: dotted 1.5px black;
     }
+
     .menu_dotted_line_camp {
         border-bottom: dotted 1.5px rgb(211, 33, 20);
     }
+
     .desc {
         grid-column: 2/4;
         grid-row: 2/3;
