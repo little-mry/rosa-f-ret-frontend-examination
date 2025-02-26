@@ -25,11 +25,10 @@ const Cart = () => {
 
 			for (const item of cartItems) {
 				for (let i = 0; i < item.quantity; i++) {
-					
 					const itemName = item.id === "campaign" ? "Cappuccino" : item.title;
 
 					expandedOrderItems.push({
-						name: itemName, 
+						name: itemName,
 						price: item.price,
 					});
 				}
@@ -50,7 +49,7 @@ const Cart = () => {
 
 	const hasCoffee = cartItems.some((item) => item.title === "Bryggkaffe" && item.quantity > 0);
 	const hasPastry = cartItems.some(
-		(item) => item.title === "Gustav adolfsbakelse" && item.quantity > 0,
+		(item) => item.title === "Gustav Adolfsbakelse" && item.quantity > 0,
 	);
 	const discountApplied = hasCoffee && hasPastry;
 
@@ -92,7 +91,7 @@ const Cart = () => {
 						<article className="cart-sum">
 							<p className="cart-sum__title">Total</p>
 							<div className="cart__dotted-line"></div>
-							{discountApplied && <p className="cart-sum__discount">Kampanjrabatt: -30 kr</p>}
+							{discountApplied && <p className="cart-sum__discount">Kampanjrabatt: -40 kr</p>}
 							<p className="cart-sum__amount">{getTotalPrice()} kr</p>
 							<p className="cart-sum__condition">inkl. moms + drönarleverans</p>
 						</article>
