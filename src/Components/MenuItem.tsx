@@ -4,8 +4,8 @@ import { getMenu, MenuItem } from "../Services/api";
 import { useCart } from "./CartContext";
 
 export default function MenuItems() {
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
-  const [campaign, setCampaign] = useState(false);
+	const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+	const [campaign, setCampaign] = useState(false);
 	const { addToCart } = useCart();
 
 	useEffect(() => {
@@ -32,6 +32,20 @@ export default function MenuItems() {
 		addToCart(id, title, price);
 	};
 
+	const handleAddCampaign = () => {
+		const coffeeItem = menuItems.find((item) => item.title === "Bryggkaffe");
+		const pastryItem = menuItems.find((item) => item.title === "Gustav Adolfsbakelse");
+
+		if (coffeeItem) {
+			addToCart(coffeeItem.id, coffeeItem.title, coffeeItem.price);
+			console.log("Added coffee:", coffeeItem.title);
+		}
+
+		if (pastryItem) {
+			addToCart(pastryItem.id, pastryItem.title, pastryItem.price);
+			console.log("Added pastry:", pastryItem.title);
+		}
+	};
 	return (
 		<>
 			<div className="MenuItems">
@@ -44,9 +58,7 @@ export default function MenuItems() {
 								src={AddImg}
 								alt="Add symbol"
 								className="btn-size"
-								onClick={() =>
-									handleAddItem(campaignOffer.id, campaignOffer.title, campaignOffer.price)
-								}
+								onClick={handleAddCampaign}
 							/>
 						</figure>
 						<h3 className="top">{campaignOffer.title}</h3>
