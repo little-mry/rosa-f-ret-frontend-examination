@@ -1,25 +1,21 @@
+@use "../Partials/Variables" as *;
+
 .nav {
     &__icon {
         cursor: pointer;
-        position: relative;
         z-index: 1001;
+        width: 3rem;
+        height: 3rem;
         margin-bottom: 2rem;
-        
-        &--close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
     }
 
     &__menu {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 480px;
-        height: 100vh;
-        background: #2F2926;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $bg-color-brown;
         z-index: 1000;
         display: flex;
         justify-content: center;
@@ -29,25 +25,34 @@
         &-content {
             text-align: center;
             width: 100%;
-            
-            nav {
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
+        }
+    }
+}
 
-                    li {
-                        color: #FFFFFF;
-                        font-size: 32px;
-                        margin: 40px 0;
-                        cursor: pointer;
+nav {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
 
-                        &:hover {
-                            opacity: 0.8;
-                        }
-                    }
-                }
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-md;
+            color: $font-color-white;
+            font-size: $font-size-h3;
+            font-weight: $font-weight-bold;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
             }
         }
     }
+}
+
+.divider-line {
+    width: 3rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.73);
 }
