@@ -1,5 +1,4 @@
-
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, useState, useContext, ReactNode, useCallback } from "react";
 
 export interface CartItemType {
 	id: string;
@@ -16,7 +15,7 @@ interface CartContextType {
 	decreaseQuantity: (id: string) => void;
 	getTotalPrice: () => number;
 	getTotalItems: () => number;
-    clearCart: () => void;
+	clearCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -24,16 +23,19 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider = ({ children }: { children: ReactNode }) => {
 	const [cartItems, setCartItems] = useState<CartItemType[]>([]);
 
-    
-	const addToCart = (id: string, title: string, price: number) => {
-		const existingItem = cartItems.find((item) => item.id === id);
+	const addToCart = useCallback((id: string, title: string, price: number) => {
+		setCartItems((prevItems) => {
+			const existingItem = prevItems.find((item) => item.id === id);
 
-		if (existingItem) {
-			increaseQuantity(id);
-		} else {
-			setCartItems([...cartItems, { id, title, price, quantity: 1 }]);
-		}
-	};
+			if (existingItem) {
+				return prevItems.map((item) =>
+					item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
+				);
+			} else {
+				return [...prevItems, { id, title, price, quantity: 1 }];
+			}
+		});
+	}, []);
 
 	const removeFromCart = (id: string) => {
 		setCartItems(cartItems.filter((item) => item.id !== id));
@@ -58,15 +60,26 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 	};
 
 	const getTotalPrice = () => {
-		return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+		const normalTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+		const hasCoffee = cartItems.some((item) => item.title === "Bryggkaffe" && item.quantity > 0);
+		const hasPastry = cartItems.some(
+			(item) => item.title === "Gustav Adolfsbakelse" && item.quantity > 0,
+		);
+
+		if (hasCoffee && hasPastry) {
+			return normalTotal - 40;
+		}
+
+		return normalTotal;
 	};
 
 	const getTotalItems = () => {
 		return cartItems.reduce((total, item) => total + item.quantity, 0);
 	};
-    const clearCart = () => {
-        setCartItems([]);
-      };
+	const clearCart = () => {
+		setCartItems([]);
+	};
 
 	return (
 		<CartContext.Provider
@@ -78,7 +91,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 				decreaseQuantity,
 				getTotalPrice,
 				getTotalItems,
-                clearCart
+				clearCart,
 			}}>
 			{children}
 		</CartContext.Provider>

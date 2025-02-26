@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     background-color: $bg-color-brown;
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 3.75rem;
+    height: 3.75rem;
     border-radius: 99%;
 }
 
@@ -109,6 +109,13 @@
 .item__amount {
     font-size: $font-size-xs;
 }
+
+.cart-sum__discount {
+    color: #E5674E; 
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
 
 .cart-sum {
     justify-self: end;
