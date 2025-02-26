@@ -10,7 +10,8 @@ const Menu: React.FC = () => {
         <h1>Meny</h1>
         <MenuItem/>
         <footer>
-        <img src={FooterImg}/>
+        <img src={FooterImg} alt="Footer med blad"
+          className="menu-footer-img"/>
         </footer>
     </div>
   );
