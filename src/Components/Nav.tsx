@@ -17,7 +17,7 @@ const Nav = () => {
       <img
         src= {isMenuOpen ? ExitIcon : NavIcon}
         alt="Navigation icon"
-        className={`nav__icon ${isMenuOpen ? "nav__icon--open" : ""}`}
+        className={`nav__icon ${isMenuOpen ? "nav__icon--close" : "nav__icon--open"}`}
         onClick={toggleMenu}
       />
 
@@ -32,6 +32,7 @@ const Nav = () => {
                     toggleMenu();
                   }}>
                   Meny
+                  <div className="divider-line"></div>
                 </li>
                 <li
                   onClick={() => {
@@ -39,6 +40,7 @@ const Nav = () => {
                     toggleMenu();
                   }}>
                   Vårt kaffe
+                  <div className="divider-line"></div>
                 </li>
                 <li
                   onClick={() => {
@@ -46,6 +48,7 @@ const Nav = () => {
                     toggleMenu();
                   }}>
                   Orderstatus
+                  <div className="divider-line"></div>
                 </li>
               </ul>
             </nav>

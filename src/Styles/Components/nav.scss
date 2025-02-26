@@ -1,15 +1,17 @@
+@use "../Partials/Variables" as *;
+
 .nav {
     &__icon {
         cursor: pointer;
-        position: relative;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        /* margin-bottom: 2rem; */
+
         z-index: 1001;
-        margin-bottom: 2rem;
         
-        &--close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
+        /* &--close {
+        } */
     }
 
     &__menu {
@@ -19,35 +21,49 @@
         /* transform: translate(-50%, -50%); */
         width: 100%;
         height: 100%;
-        background: #2F2926;
+        background: $bg-color-brown;
         z-index: 1000;
         display: flex;
         justify-content: center;
         align-items: center;
         max-width: 100%; 
+        overflow-y: hidden;
 
         &-content {
             text-align: center;
             width: 100%;
             
-            nav {
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
+        }
+    }
+}
+nav {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-                    li {
-                        color: #FFFFFF;
-                        font-size: 32px;
-                        margin: 40px 0;
-                        cursor: pointer;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-md;
+            color: $font-color-white;
+            font-size: $font-size-h3;
+            font-weight: $font-weight-bold;
+            /* margin: 40px 0; */
+            cursor: pointer;
 
-                        &:hover {
-                            opacity: 0.8;
-                        }
-                    }
-                }
+            &:hover {
+                opacity: 0.8;
             }
         }
     }
+}
+
+.divider-line {
+    width: 3rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.73);
 }
