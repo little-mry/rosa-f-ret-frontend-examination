@@ -3,10 +3,10 @@
 .nav {
     &__icon {
         cursor: pointer;
-        position: absolute;
-        top: 20px;
-        left: 20px;
         z-index: 1001;
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 2rem;
     }
 
     &__menu {
@@ -25,7 +25,6 @@
         &-content {
             text-align: center;
             width: 100%;
-            
         }
     }
 }
