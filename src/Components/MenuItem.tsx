@@ -23,7 +23,7 @@ export default function MenuItems() {
 
 	const campaignOffer = {
 		id: "campaign",
-		title: "Kampanjerbjudande",
+		title: "Kampanjerbjudande☕🧁",
 		desc: "Bryggkaffe + bakelse",
 		price: 49,
 	};
