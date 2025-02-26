@@ -4,37 +4,38 @@ import removeIcon from "../assets/circle-minus.svg";
 import { useCart } from "./CartContext";
 
 interface CartItemProps {
-  id: string;
-  title: string;
-  price: number;
-  quantity: number;
+	id: string;
+	title: string;
+	price: number;
+	quantity: number;
 }
 
 const CartItem = ({ id, title, price, quantity }: CartItemProps) => {
-  const { increaseQuantity, decreaseQuantity } = useCart();
+	const { increaseQuantity, decreaseQuantity } = useCart();
 
-  return (
-    <article className="cart__item">
-      <p className="item__title">{title}</p>
-      <div className="cart__dotted-line"></div>
-      <div className="change-cart__con">
-        <img 
-          src={addIcon} 
-          alt="add" 
-          className="change-cart__icon" 
-          onClick={() => increaseQuantity(id)}
-        />
-        <p className="item__amount">{quantity}</p>
-        <img 
-          src={removeIcon} 
-          alt="remove" 
-          className="change-cart__icon" 
-          onClick={() => decreaseQuantity(id)}
-        />
-      </div>
-      <p className="item__price">{price * quantity} kr</p>
-    </article>
-  );
+	return (
+		<article className="cart__item">
+			<p className="item__title">{title}</p>
+			<div className="cart__dotted-line"></div>
+			<div className="change-cart__con">
+				<img
+					src={removeIcon}
+					alt="remove"
+					className="change-cart__icon"
+					onClick={() => decreaseQuantity(id)}
+				/>
+				<p className="item__amount">{quantity}</p>
+
+				<img
+					src={addIcon}
+					alt="add"
+					className="change-cart__icon"
+					onClick={() => increaseQuantity(id)}
+				/>
+			</div>
+			<p className="item__price">{price * quantity} kr</p>
+		</article>
+	);
 };
 
 export default CartItem;
