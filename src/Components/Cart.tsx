@@ -25,11 +25,11 @@ const Cart = () => {
 
 			for (const item of cartItems) {
 				for (let i = 0; i < item.quantity; i++) {
-					// Check if this is the campaign item and replace its name
+					
 					const itemName = item.id === "campaign" ? "Cappuccino" : item.title;
 
 					expandedOrderItems.push({
-						name: itemName, // Use "Bryggkaffe" for campaign items
+						name: itemName, 
 						price: item.price,
 					});
 				}
