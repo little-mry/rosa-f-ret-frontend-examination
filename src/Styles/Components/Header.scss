@@ -1,24 +1,39 @@
-@use '../Partials/Variables' as *;
+@use "../Partials/Variables" as *;
 
 .header__con {
-    background-size: cover;
-    background-position: cover;
-    width: 100%;
-    height: 7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $spacing-sm 0;
-}
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0 $spacing-md;
 
-.cart__amount {
+  .cart__amount {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $bg-color-orange;
     border-radius: $border-radius-round;
-    width: .875rem;
-    height: .875rem;
+    width: 1.375rem;
+    height: 1.375rem;
     color: $font-color-white;
     font-size: $font-size-xs;
+    top: 0;
+    right: 0;
+  }
+
+  .cart__con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1.4rem;
+  }
+
+  
+
+
 }

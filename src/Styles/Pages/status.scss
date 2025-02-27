@@ -1,42 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@use '../Partials/Variables' as *;
 
-div {
-    width: 100vw;
+.wrapper-status {
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 375px;
-    background-color: #E5674E;
+    background-color: $bg-color-orange;
     align-items: center;
     justify-content: space-evenly;
-    color: white;
+    color: $font-color-white;
     text-align: center;
 
-        h3 {
-            font-weight: 100;
+
+        .status-header {
+            font-family: $font-secondary;
+            font-weight: $font-weight-normal;
+            font-size: $font-size-xs;
             }
 }
 
-h2 {
+.status-underheader {
     display: flex;
     flex-direction: column;
     font-size: 40px;
     width: 80%;
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
     }
-    p {
+    .status-text {
         font-size: 22px;
         padding-top: 7%;
+        font-family: $font-secondary;
+        font-weight: $font-weight-bold;
 }
 
 
-button {
+.status-button {
     width: 184px;
     height: 55px;
     border-radius: 50px;
     border-style: none;
     font-size: 24px;
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
     
 }
