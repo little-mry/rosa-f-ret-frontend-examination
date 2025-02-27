@@ -18,6 +18,7 @@ interface CartContextType {
 	clearCart: () => void;
 }
 
+// Creates a context for the cart
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -37,16 +38,19 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 		});
 	}, []);
 
+	// Removes an item from the cart 
 	const removeFromCart = (id: string) => {
 		setCartItems(cartItems.filter((item) => item.id !== id));
 	};
 
+	// Increases the quantity of an item
 	const increaseQuantity = (id: string) => {
 		setCartItems(
 			cartItems.map((item) => (item.id === id ? { ...item, quantity: item.quantity + 1 } : item)),
 		);
 	};
 
+	// Decreases the quantity of an item, removing it if quantity reaches zero
 	const decreaseQuantity = (id: string) => {
 		const item = cartItems.find((item) => item.id === id);
 
@@ -59,6 +63,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 		}
 	};
 
+	// Calculates the total price of items in the cart, applying a discount if coffee and pastry are both present
 	const getTotalPrice = () => {
 		const normalTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
@@ -74,9 +79,11 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 		return normalTotal;
 	};
 
+	// Calculates the total number of items in the cart
 	const getTotalItems = () => {
 		return cartItems.reduce((total, item) => total + item.quantity, 0);
 	};
+	// Clears all items from the cart
 	const clearCart = () => {
 		setCartItems([]);
 	};
@@ -98,6 +105,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 	);
 };
 
+//Throws an error if used outside of CartProvider otherwise it gives you CartContext value 
 export const useCart = () => {
 	const context = useContext(CartContext);
 	if (context === undefined) {
