@@ -1,3 +1,4 @@
+// Component for About.tsx with info about the company.
 const AboutText = () => {
   return (
     <div className="about-content">
