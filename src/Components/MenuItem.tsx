@@ -4,34 +4,38 @@ import { getMenu, MenuItem } from "../Services/api";
 import { useCart } from "./CartContext";
 
 export default function MenuItems() {
-	const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
-	const [campaign, setCampaign] = useState(false);
+	const [menuItems, setMenuItems] = useState<MenuItem[]>([]); //Sets menuitems in a MenuItem-array
+	const [campaign, setCampaign] = useState(false); // Sets campaign-status 
 	const { addToCart } = useCart();
 
+	//Fetches menu items from api.ts and puts items in array MenuItem
 	useEffect(() => {
 		const fetchMenu = async () => {
 			const menu = await getMenu();
 			setMenuItems(menu);
 		};
 		fetchMenu();
-
+		
+		//Checks if condition (month) for campaign anf sets campaign-state to true or false 
 		const currentMonth = new Date().getMonth();
 		if (currentMonth === 1) {
 			setCampaign(true);
 		}
 	}, []);
 
-	const campaignOffer = {
+	const campaignOffer: MenuItem = {
 		id: "campaign",
 		title: "Kampanjerbjudande☕🧁",
-		desc: "Bryggkaffe + bakelse",
+		desc: "Bryggkaffe + Gustav Adolfsbakelse",
 		price: 49,
 	};
 
+	//Adds menu item to cart
 	const handleAddItem = (id: string, title: string, price: number) => {
 		addToCart(id, title, price);
 	};
 
+	//If customer chooses campaign offer in menu, two items are put in cart (coffee and pastry)
 	const handleAddCampaign = () => {
 		const coffeeItem = menuItems.find((item) => item.title === "Bryggkaffe");
 		const pastryItem = menuItems.find((item) => item.title === "Gustav Adolfsbakelse");
@@ -49,6 +53,7 @@ export default function MenuItems() {
 	return (
 		<>
 			<div className="MenuItems">
+				{/* If campaign is true, campaign offer is rendered */}
 				{campaign && (
 					<section
 						className="cont_camp"
@@ -69,7 +74,7 @@ export default function MenuItems() {
 						</section>
 					</section>
 				)}
-
+				{/* Renders all the menu items */}
 				{menuItems.map((item) => (
 					<section
 						className="cont"
