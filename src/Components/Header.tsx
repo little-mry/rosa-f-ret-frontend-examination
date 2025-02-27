@@ -1,5 +1,4 @@
 import headerImg from "../assets/header-up.png";
-/* import CartIcon from "../assets/bag.svg"; */
 import '../Styles/Components/Header.scss'
 import Cart from "./Cart";
 import Nav from "./Nav";
