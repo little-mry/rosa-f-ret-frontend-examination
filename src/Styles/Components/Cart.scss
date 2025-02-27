@@ -8,6 +8,7 @@
     width: 3.75rem;
     height: 3.75rem;
     border-radius: 99%;
+    cursor: pointer;
 }
 
 .cart__icon {
@@ -15,7 +16,7 @@
     align-items: center;
     justify-content: center;
     width: 30%;
-    cursor: pointer;
+   
   }
 
   .cart__modal {
@@ -104,6 +105,7 @@
     width: 2rem;
     height: 2rem;
     padding-left: $spacing-sm;
+    cursor: pointer;
 }
 
 .item__amount {

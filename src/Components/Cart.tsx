@@ -64,8 +64,8 @@ const Cart = () => {
 
   return (
     <>
-      <div className="cart__icon__con">
-        <img src={CartIcon} alt="Cart icon" className="cart__icon" onClick={toggleCart} />
+      <div className="cart__icon__con" onClick={toggleCart}>
+        <img src={CartIcon} alt="Cart icon" className="cart__icon"  />
 {/*Show item count if the cart is not empty */}
         {getTotalItems() > 0 && <p className="cart__amount">{getTotalItems()}</p>}
       </div>
